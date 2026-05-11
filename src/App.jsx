@@ -1,13 +1,12 @@
-import React from "react";
-import { Header } from "./components/Header.jsx";
-import { Hero } from "./components/Hero.jsx";
-import { TrustBar } from "./components/TrustBar.jsx";
-import { CredibilitySection } from "./components/Credibility.jsx";
-import { DashboardSection } from "./components/Dashboard.jsx";
-import { BentoSection } from "./components/Bento.jsx";
-import { BlogSection } from "./components/Blog.jsx";
-import { FinalCTA } from "./components/FinalCTA.jsx";
-import { Footer } from "./components/Footer.jsx";
+import { Header } from "./Header.jsx";
+import { Hero } from "./Hero.jsx";
+import { TrustBar } from "./TrustBar.jsx";
+import { CredibilitySection } from "./Credibility.jsx";
+import { DashboardSection } from "./Dashboard.jsx";
+import { BentoSection } from "./Bento.jsx";
+import { BlogSection } from "./Blog.jsx";
+import { FinalCTA } from "./FinalCTA.jsx";
+import { Footer } from "./Footer.jsx";
 
 export default function App() {
   return (
