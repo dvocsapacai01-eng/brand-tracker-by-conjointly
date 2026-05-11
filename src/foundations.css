@@ -1,0 +1,296 @@
+/* ============================================================
+   Brand Tracker by Conjointly — Foundations
+   Colors, type, spacing, radii, shadows, motion.
+   ============================================================ */
+
+/* ---------- Aeonik webfont ---------- */
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Color: brand ---------- */
+  /* Brand Tracker brand mark uses three pastels from the logo */
+  --bt-brand-pink:    #FF8B9E;
+  --bt-brand-blue:    #98DEFF;
+  --bt-brand-mint:    #81E6CF;
+
+  /* Ink — used for headings, primary CTA, body text */
+  --bt-ink:           #212529;   /* near-black, headings + primary button */
+  --bt-ink-hover:     #181b1f;
+  --bt-ink-press:     #0e1114;
+
+  /* Accent — brand pink as the signal color (used sparingly) */
+  --bt-accent:        #FF8B9E;
+  --bt-accent-hover:  #ff6f86;
+  --bt-accent-soft:   #ffe9ed;   /* tinted bg for active tabs / badges */
+
+  /* ---------- Color: surface & text ---------- */
+  --bt-bg:            #ffffff;   /* white page background */
+  --bt-bg-grid:       rgba(33, 37, 41, 0.06); /* subtle grid line */
+  --bt-surface:       #ffffff;   /* card */
+  --bt-surface-2:     #f7f8fa;   /* alt card / inset */
+  --bt-surface-ink:   #212529;   /* deepest near-black for hero & footer cards */
+
+  --bt-fg-1:          #212529;   /* primary heading & body */
+  --bt-fg-2:          #3a4047;   /* body */
+  --bt-fg-3:          #5b6573;   /* muted body / secondary */
+  --bt-fg-4:          #8a93a1;   /* labels / captions / placeholder */
+  --bt-fg-onink:      #ffffff;   /* text on dark surface */
+  --bt-fg-onink-mute: rgba(255, 255, 255, 0.65);
+
+  /* ---------- Color: borders ---------- */
+  --bt-border:        #e8eaee;   /* default card border, cool grey */
+  --bt-border-strong: #d4d8de;
+  --bt-border-soft:   #f0f2f5;
+  --bt-divider:       #ebedf0;
+
+  /* ---------- Color: dataviz palette (from charts) ---------- */
+  --bt-data-blue:     #1841d4;
+  --bt-data-green:    #1f9a17;
+  --bt-data-yellow:   #f3c41a;
+  --bt-data-amber:    #f0a91d;
+  --bt-data-red:      #d4262e;
+  --bt-data-pink:     #e6248a;
+  --bt-data-magenta:  #b51fa6;
+  --bt-data-purple:   #7a5fb6;
+  --bt-data-violet:   #7a3ce0;
+  --bt-data-teal:     #2ea4d4;
+  --bt-data-navy:     #2f3f8a;
+  --bt-data-slate:    #5d6d8c;
+  --bt-data-orange:   #f08a1a;
+
+  /* ---------- Color: semantic ---------- */
+  --bt-positive:      #1f9a17;
+  --bt-positive-soft: #e7f5e6;
+  --bt-warning:       #d68a14;
+  --bt-warning-soft:  #fbf2dd;
+  --bt-negative:      #c4262e;
+  --bt-negative-soft: #fbe7e8;
+
+  /* ---------- Type ---------- */
+  --bt-font-sans:     "Aeonik", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --bt-font-mono:     ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  /* base size */
+  --bt-text-xs:   12px;
+  --bt-text-sm:   14px;
+  --bt-text-base: 16px;
+  --bt-text-md:   18px;
+  --bt-text-lg:   20px;
+  --bt-text-xl:   24px;
+  --bt-text-2xl:  30px;
+  --bt-text-3xl:  38px;
+  --bt-text-4xl:  48px;
+  --bt-text-5xl:  60px;
+  --bt-text-6xl:  72px;
+
+  /* tracking */
+  --bt-tracking-tight:  -0.03em;
+  --bt-tracking-snug:   -0.015em;
+  --bt-tracking-normal: 0;
+  --bt-tracking-wide:   0.02em;
+  --bt-tracking-eyebrow: 0.08em;
+
+  /* ---------- Spacing ---------- */
+  --bt-space-1:  4px;
+  --bt-space-2:  8px;
+  --bt-space-3:  12px;
+  --bt-space-4:  16px;
+  --bt-space-5:  20px;
+  --bt-space-6:  24px;
+  --bt-space-8:  32px;
+  --bt-space-10: 40px;
+  --bt-space-12: 48px;
+  --bt-space-16: 64px;
+  --bt-space-20: 80px;
+  --bt-space-24: 96px;
+  --bt-space-32: 128px;
+
+  /* ---------- Radii ---------- */
+  --bt-radius-xs:    4px;
+  --bt-radius-sm:    6px;
+  --bt-radius-md:    10px;
+  --bt-radius-lg:    14px;
+  --bt-radius-xl:    20px;
+  --bt-radius-2xl:   28px;
+  --bt-radius-pill:  999px;
+
+  /* ---------- Shadows ---------- */
+  --bt-shadow-xs:  0 1px 2px rgba(10, 20, 34, 0.04);
+  --bt-shadow-sm:  0 1px 3px rgba(10, 20, 34, 0.05), 0 1px 2px rgba(10, 20, 34, 0.04);
+  --bt-shadow-md:  0 6px 16px -6px rgba(10, 20, 34, 0.08), 0 2px 4px rgba(10, 20, 34, 0.04);
+  --bt-shadow-lg:  0 20px 40px -16px rgba(10, 20, 34, 0.14), 0 4px 10px rgba(10, 20, 34, 0.05);
+  --bt-shadow-xl:  0 32px 64px -24px rgba(10, 20, 34, 0.18), 0 6px 14px rgba(10, 20, 34, 0.06);
+  --bt-shadow-inset: inset 0 0 0 1px rgba(10, 50, 86, 0.06);
+
+  /* ---------- Motion ---------- */
+  --bt-ease:        cubic-bezier(0.2, 0.7, 0.2, 1);
+  --bt-ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --bt-dur-fast:    120ms;
+  --bt-dur-base:    200ms;
+  --bt-dur-slow:    320ms;
+
+  /* ---------- Layout ---------- */
+  --bt-container:        1200px;
+  --bt-container-narrow: 760px;
+  --bt-section-py:       clamp(72px, 10vw, 128px);
+  --bt-card-pad:         clamp(24px, 3vw, 36px);
+}
+
+/* ============================================================
+   Semantic typography utility classes
+   ============================================================ */
+
+.bt-eyebrow {
+  font-family: var(--bt-font-sans);
+  font-size: var(--bt-text-xs);
+  font-weight: 500;
+  letter-spacing: var(--bt-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--bt-fg-3);
+}
+
+.bt-h1 {
+  font-family: var(--bt-font-sans);
+  font-size: clamp(34px, 6.2vw, 72px);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: var(--bt-tracking-tight);
+  color: var(--bt-fg-1);
+  text-wrap: balance;
+}
+
+.bt-h2 {
+  font-family: var(--bt-font-sans);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: var(--bt-tracking-tight);
+  color: var(--bt-fg-1);
+  text-wrap: balance;
+}
+
+.bt-h3 {
+  font-family: var(--bt-font-sans);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--bt-tracking-snug);
+  color: var(--bt-fg-1);
+}
+
+.bt-h4 {
+  font-family: var(--bt-font-sans);
+  font-size: var(--bt-text-xl);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: var(--bt-tracking-snug);
+  color: var(--bt-fg-1);
+}
+
+.bt-lead {
+  font-family: var(--bt-font-sans);
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--bt-fg-3);
+  text-wrap: pretty;
+}
+
+.bt-body {
+  font-family: var(--bt-font-sans);
+  font-size: var(--bt-text-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--bt-fg-2);
+}
+
+.bt-body-sm {
+  font-family: var(--bt-font-sans);
+  font-size: var(--bt-text-sm);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--bt-fg-3);
+}
+
+.bt-label {
+  font-family: var(--bt-font-sans);
+  font-size: var(--bt-text-xs);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--bt-fg-4);
+}
+
+/* ============================================================
+   Page primitives — grid background, container
+   ============================================================ */
+
+.bt-page {
+  background-color: var(--bt-bg);
+  color: var(--bt-fg-2);
+  font-family: var(--bt-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bt-grid-bg {
+  background-image:
+    linear-gradient(to right, var(--bt-bg-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bt-bg-grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+}
+
+.bt-container {
+  width: 100%;
+  max-width: var(--bt-container);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 32px);
+}
