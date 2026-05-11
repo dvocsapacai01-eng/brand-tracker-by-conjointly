@@ -5,7 +5,7 @@ import { BT_BRANDS, Icon } from "./Primitives.jsx";
 
 function HeroPreview() {
   // top 6 brands, animated funnel
-  const top = window.BT_BRANDS.slice(0, 6);
+  const top = (window.BT_BRANDS || []).slice(0, 6);
   return (
     <div className="bt-hero__preview">
       <div className="bt-hero__preview-inner">
