@@ -1,13 +1,3 @@
-const BT_BRANDS = [
-  { name: "Brand A", aided: 65, color: "#ff8fa3" },
-  { name: "Brand B", aided: 58, color: "#7ddfc8" },
-  { name: "Brand C", aided: 51, color: "#b7a7ff" },
-  { name: "Brand D", aided: 44, color: "#ffd166" },
-  { name: "Brand E", aided: 38, color: "#8ecae6" },
-  { name: "Brand F", aided: 31, color: "#adb5bd" },
-];
-
-
 
 import React from "react";
 import { BT_BRANDS, Icon } from "./Primitives.jsx";
@@ -16,7 +6,14 @@ import { BT_BRANDS, Icon } from "./Primitives.jsx";
 
 function HeroPreview() {
   // top 6 brands, animated funnel
-  const top = (window.BT_BRANDS || []).slice(0, 6);
+  const top = (window.BT_BRANDS || [
+  { name: "Brand A", aided: 65, color: "#ff8fa3" },
+  { name: "Brand B", aided: 58, color: "#7ddfc8" },
+  { name: "Brand C", aided: 51, color: "#b7a7ff" },
+  { name: "Brand D", aided: 44, color: "#ffd166" },
+  { name: "Brand E", aided: 38, color: "#8ecae6" },
+  { name: "Brand F", aided: 31, color: "#adb5bd" },
+];).slice(0, 6);
   return (
     <div className="bt-hero__preview">
       <div className="bt-hero__preview-inner">
