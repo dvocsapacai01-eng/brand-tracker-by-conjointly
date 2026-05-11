@@ -145,7 +145,7 @@ function TabCategoryOverview() {
       <div style={{ background: "var(--bt-surface-2)", borderRadius: 12, padding: 24, display: "flex", flexDirection: "column" }}>
         <h4 style={{ fontSize: 13, fontWeight: 500, color: "var(--bt-fg-3)", margin: "0 0 12px" }}>Top 5 lorem ipsum dolor</h4>
         <div style={{ display: "flex", flexDirection: "column", gap: 10, flex: 1, justifyContent: "center" }}>
-          {BT_BRANDS.slice(0, 5).map((b, i) => (
+         {BT_BRANDS.slice(0, 5).map((b, i) => (
             <div key={b.name} style={{ display: "grid", gridTemplateColumns: "120px 1fr 50px", gap: 10, alignItems: "center" }}>
               <span style={{ fontSize: 12, color: "var(--bt-fg-1)" }}>{b.name}</span>
               <div style={{ height: 16, background: "var(--bt-surface)", borderRadius: 999 }}>
@@ -163,7 +163,7 @@ function TabCategoryOverview() {
 
 function TabPerception() {
   const attrs = ["Lorem", "Ipsum", "Dolor sit amet", "Consectetur", "Adipiscing", "Eiusmod"];
-  const data = BT_BRANDS.slice(0, 6);
+const data = (BT_BRANDS || []).slice(0, 6);
   return (
     <div>
       <h4 style={{ fontSize: 13, fontWeight: 500, color: "var(--bt-fg-3)", margin: "0 0 16px" }}>Lorem ipsum dolor sit amet · % consectetur</h4>
