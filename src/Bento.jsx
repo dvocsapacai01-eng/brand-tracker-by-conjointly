@@ -5,7 +5,7 @@ import { Hero } from "./Hero.jsx";
 // Bento — 06.A: Big-left + 4 small.
 
 export function BentoSection() {
-  const top5 = BT_BRANDS.slice(0, 5);
+  const top5 = (BT_BRANDS || []).slice(0, 5);
   return (
     <section id="features" className="bt-section">
       <div className="bt-container">
