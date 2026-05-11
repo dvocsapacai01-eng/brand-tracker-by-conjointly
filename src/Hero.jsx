@@ -1,12 +1,7 @@
-
 import React from "react";
-import { BT_BRANDS, Icon } from "./Primitives.jsx";
+import { Icon } from "./Primitives.jsx";
 
-// Hero — 02.B: Two-column. Copy left, dashboard preview right.
-
-function HeroPreview() {
-  // top 6 brands, animated funnel
-  const BT_BRANDS = [
+const BT_BRANDS = [
   { name: "Brand A", aided: 65, color: "#ff8fa3" },
   { name: "Brand B", aided: 58, color: "#7ddfc8" },
   { name: "Brand C", aided: 51, color: "#b7a7ff" },
@@ -14,6 +9,12 @@ function HeroPreview() {
   { name: "Brand E", aided: 38, color: "#8ecae6" },
   { name: "Brand F", aided: 31, color: "#adb5bd" },
 ];
+
+// Hero — 02.B: Two-column. Copy left, dashboard preview right.
+
+function HeroPreview() {
+  // top 6 brands, animated funnel
+  const top = BT_BRANDS.slice(0, 6);
 
   return (
     <div className="bt-hero__preview">
